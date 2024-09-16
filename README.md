@@ -221,6 +221,10 @@ ansible-playbook iac/ansible/deploy_jenkins/create_compute_instance.yaml
 
 Deploy Jenkins on a server by installing prerequisites, pulling a Docker image, and creating a privileged container with access to the Docker socket and exposed ports 8081 and 50000.
 
+```
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/[YOUR_KEY_FILENAME]
+```
+
 ```bash
 ansible-playbook -i iac/ansible/inventory iac/ansible/deploy_jenkins/deploy_jenkins.yaml
 ```
