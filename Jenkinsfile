@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = 'bmd1905/open-webui'
+        DOCKER_IMAGE = 'hongdinh/open-webui'
         DOCKER_TAG = "${env.BUILD_NUMBER}"
         DOCKER_FULL_IMAGE = "${DOCKER_IMAGE}:${DOCKER_TAG}"
         DOCKER_REGISTRY_CREDENTIAL = 'dockerhub'
@@ -57,7 +57,7 @@ pipeline {
                         spec:
                           containers:
                           - name: helm
-                            image: bmd1905/jenkins-k8s:lts-jdk17
+                            image: hongdinh/jenkins-k8s:lts-jdk17
                             imagePullPolicy: Always
                             command:
                             - cat
